@@ -1,7 +1,7 @@
 # Discharging Method on Planar Graph
-This is the final project for my Master degree in Mathematics with focus on graph theory
+This is the final project for my Master degree in Mathematics with focus on graph theory.
 
-**Projec status**: Completed
+**Projec status**:--Completed
 
 ## Introduction
 
@@ -22,8 +22,6 @@ In this project, we investigate the technique called **Discharging Method** that
 
 The detail of the proof was presented in the attached pdf files. You can also find the LaTex version in the following [link](https://www.overleaf.com/read/brppnmdtttwz) (This require [Overleaf](https://www.overleaf.com/) account)
 
-
-
 **References**
 
-[1] Daniel W. Cranston and Douglas B. West, An Introduction to the Discharging Method via Graph Coloring, [arXiv](https://arxiv.org/abs/1306.4434v1). October 10th, 2016. 
+Daniel W. Cranston and Douglas B. West, An Introduction to the Discharging Method via Graph Coloring, [arXiv](https://arxiv.org/abs/1306.4434v1). October 11th, 2016. 
