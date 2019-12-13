@@ -1,82 +1,39 @@
-# Discharging-Method-on-Planar-Graph-Master-Project
+# Discharging Method on Planar Graph
+This is the final project for my Master degree in Mathematics with focus on graph theory
 
-#1 Introduction
+**Projec status**: Completed
 
-* The discharging method is a technique used to prove lemmas in structural graph theory
+## Introduction
 
-* Discharging is most well known for its central role in the proof of the Four Color Theorem
+In mathematics, the four color theorem, or the four color map theorem, states that, given any separation of a plane into contiguous regions, producing a figure called a map, no more than four colors are required to color the regions of the map so that no two adjacent regions have the same color.
 
-* The discharging method is used to prove that every graph in a certain class contains some subgraph from a specified list.
+In 1976, the four color theorem was proved by Appel and Haken using discharging method. The proof is verycomplex, over 400 pages, and it heavily relies on computer.
 
-* The presence of the desired subgraph is then often used to prove a coloring result.
+The process is first using the computer to break down the problem into many smaller cases, then use mathematics to prove these cases. 
 
-## Four color theorem
+In this project, we investigate the technique called **Discharging Method** that was developed to prove the math part of the problem. Later, we use discharging method to solve problems that are outside the scope of Four Color Theorem. One of which is a smaller case of Vizing's conjecture. 
 
-{Picture/Map_of_United_States_vivid_colors_shown.png}
+## Result
+I proved two theorems:
 
-* In mathematics, the four color theorem, or the four color map theorem, states that, given any separation of a plane into contiguous regions, producing a figure called a map, no more than four colors are required to color the regions of the map so that no two adjacent regions have the same color. Adjacent means that two regions share a common boundary curve segment, not merely a corner where three or more regions meet
+**Theorem 1**: Every plane graph having no 4-cycle and no j-face with 5≤j≤9 is 3-colorable.
 
-* In 1904, Wernicke introduced the discharging method to prove a theorem which was part of an attempt to prove the four color theorem.
+**Theorem 2**: If G is a plane graph and no two 3-faces sharing an edge, then G is max(∆(G) + 1,8)-edge choosable
 
-* In 1976, the four color theorem was proved by Appel and Haken using discharging method. The proof is very complex, over 400 pages, and it heavily relies on computer.
+The detail of the proof was presented in the attached pdf files. You can also find the LaTex version in the following (link)[https://www.overleaf.com/read/brppnmdtttwz] (This require [Overleaf](https://www.overleaf.com/) account)
 
-# Method 
-**Euler's formula**: For a connected planar graph: $$V(G)-E(G)+F(G)=2$$
+**References**
 
-Multiply Euler’s Formula by $-6$ and split the term for edges to obtain:
+[1] Daniel W. Cranston and Douglas B. West, An Introduction to the Discharging Method via Graph Coloring, SIAM J. Discrete Math. 16. October 10th, 2016, no. 4, 651–662.
 
-$$-6V(G)+2E(G)+4E(G)-6F(G)=-12$$
 
-Since $E(G)=\frac{1}{2}\sum_{v\in V(G)}d(v)$ and $E(G) = \frac{1}{2}\sum_{f\in F(G)}l(f)$  substitute to the equation we get
+@misc{cranston2013introduction,
+    title={An Introduction to the Discharging Method via Graph Coloring},
+    author={Daniel W. Cranston and Douglas B. West},
+    year={2013},
+    eprint={1306.4434},
+    archivePrefix={arXiv},
+    primaryClass={math.CO}
+}
 
-$$\sum_{v\in V(G)}(d(v)-6)+\sum_{f\in F(G)}(2l(f)-6)=-12$$
-
-If we multiply Euler's formula by $-6$ and split E(G) as similar
-
-$$-6V(G)+4E(G)+2E(G)-6F(G)=-12$$
-
-or multiply by $-4$ split the edge as similar
-
-$$-4V(G) + 2E(G) + 2E(G) - 4F(G) = -8$$
-
-and complete the substitution, we obtain the following proposition.
-
-**Proposition:** Let $G$ be a connected plane graph then the following hold for $G$
-
-$$\sum_{v\in V(G)}(d(v)-6)+\sum_{f\in F(G)}(2l(f)-6)=-12 \text{ (vertex charging)}$$
-
-$$\sum_{v\in V(G)}(2d(v)-6)+\sum_{f\in F(G)}(l(f)-6)=-12 \text{ (face charging)}$$
-
-$$\sum_{v\in V(G)}(d(v)-4)+\sum_{f\in F(G)}(l(f)-4)=-8  \text{ (balance charging)}$$
-
-**General structure of the future proof:** 
-
-* Assume by contradiction that G has none of the configuration
-
-* Initialize charge
-
-* Establish discharging rule
-
-* Calculate final charge (which would contradict with the proposition)
-
-# Lemma 1
-Every plane graph $G$ with $\delta(G) \geq 3$ has two $3$-faces with a common edge, or a $j$-face with $4 \leq j \leq 9$, or a $10$-face whose vertices all have degree $3$.
-
-Proof:
-Suppose the graph has none of these configuration which means: 
-
-**C1**: No $3$-faces with a common edge
-
-**C2**: Every $j$-face satisfies $j=3$ or $j\geq 10$  
-
-**C3**: Every $10$-face have at least one $4^+$-vertex
-
-Use face charging: $2d(v)-6$ for each vertex, $l(f)-6$ for each face. The only thing that need charge are $3$-faces and they begin with charge $-3$.
-
-**R1**: Each triangle takes $1$ charge from each neighboring face.
-
-**R2**: Each face $f$ takes $1$ charge from each incident $4^+$-vertex lying on the triangle sharing an edge with $f$
-
-Every $3$-face is happy because of R1. $3$-vertices also happy. Let $v$ be a $j$-vertex where $j\geq 4$ and we investigate how much charge $v$ can lose. A triangle incident to $v$ can have at most $2$ neighboring-faces that each can take $1$ charge from $v$. This also require at least $2$ extra edges. These extra edges can also be shared by $2$ triangles.
-
-Therefore, the worst case scenario is when we have triangles and edges alternating. Note that if $3|j$ then $v$ would lose at most $\frac{2j}{3}$
+https://www.overleaf.com/read/brppnmdtttwz
