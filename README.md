@@ -16,7 +16,7 @@ In this project, we investigate the technique called **Discharging Method** that
 ## Result
 
 **Theorem 1**: Every plane graph having no 4-cycle and no j-face with 5≤j≤9 is 3-colorable.
-![Discharging rule](https://github.com/williamhuybui/Discharging-Method-on-Planar-Graph-Master-Project/blob/master/Picture/Map_of_United_States_vivid_colors_shown.png)
+![Discharging rule](https://github.com/williamhuybui/Discharging-Method-on-Planar-Graph-Master-Project/blob/master/Picture/Discharging-tule-theorem1.png)
 
 **Theorem 2**: If G is a plane graph and no two 3-faces sharing an edge, then G is max(∆(G) + 1,8)-edge choosable
 
